@@ -3,6 +3,7 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from fastapi.middleware.cors import CORSMiddleware
 import models
 import schemas
 from database import Base, engine, get_db
@@ -16,6 +17,13 @@ from security import (
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Job Application Tracker")
+app.add_middleware(
+       CORSMiddleware,
+       allow_origins=["http://localhost:5173"],
+       allow_methods=["*"],
+       allow_headers=["*"],
+   )
+
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
 

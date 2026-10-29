@@ -1,0 +1,20 @@
+   .auth { max-width: 340px; margin: 80px auto; text-align: center; }
+   .auth form { display: flex; flex-direction: column; gap: 10px; }
+   input, select { padding: 10px; border: 1px solid #ccd; border-radius: 6px; font-size: 14px; }
+   button { padding: 10px 14px; border: 0; border-radius: 6px; background: #3b5bdb; color: #fff; cursor: pointer; font-size: 14px; }
+   button.link { background: none; color: #3b5bdb; margin-top: 12px; }
+   button.danger { background: #e03131; }
+   .error { color: #e03131; }
+
+   .board-page { max-width: 1100px; margin: 0 auto; padding: 24px; }
+   header { display: flex; justify-content: space-between; align-items: center; }
+   .add { display: flex; gap: 10px; margin: 20px 0; }
+   .add input { flex: 1; }
+   .columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; align-items: start; }
+   .column { background: #e9ebf3; border-radius: 10px; padding: 12px; }
+   .column h2 { font-size: 15px; margin: 0 0 10px; display: flex; justify-content: space-between; }
+   .card { background: #fff; border-radius: 8px; padding: 12px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+   .card p { margin: 4px 0; }
+   .card small { color: #667; }
+   .actions { display: flex; gap: 6px; margin-top: 8px; }
+   .actions select { flex: 1; }
