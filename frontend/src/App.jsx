@@ -1,4 +1,4 @@
-const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+import { useCallback, useEffect, useState } from "react";
 import { request } from "./api";
 import "./App.css";
 
