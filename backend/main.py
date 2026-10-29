@@ -1,3 +1,4 @@
+import os
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy import select
@@ -19,7 +20,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Job Application Tracker")
 app.add_middleware(
        CORSMiddleware,
-       allow_origins=["http://localhost:5173"],
+       allow_origins=os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(","),
        allow_methods=["*"],
        allow_headers=["*"],
    )
